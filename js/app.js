@@ -1,5 +1,17 @@
 document.load = getAllData();
 
+//funcion de scroll
+jQuery(document).ready(function() {
+    $('.search-pokemon').addClass('animated fadeInLeft');
+    $('.order-button').addClass('animated fadeInRight');
+    $('.pokemon-card').addClass('animated fadeInUp');
+    jQuery('.pokemon-card').addClass("hide").viewportChecker({
+        classToAdd: 'show animated fadeInUp',
+        offset: 100
+       });
+});
+
+
 const $filterInput = $('.filtered-pokemon');
 
 $filterInput.keyup(filterPokemons);
@@ -92,6 +104,8 @@ function createTypesButtons(array){
     $('.type').append(templateButton)
   })
 }
+
+
 
 // funciones para ordenar alfabeticamente
 $('.order-button').click(function(){

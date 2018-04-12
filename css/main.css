@@ -7,6 +7,13 @@ body {
   background-position: bottom center;
   background-size: cover;
 }
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
 
 #pokemons-container > div > div > div > img{
   max-height: 170px;
