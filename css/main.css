@@ -2,17 +2,22 @@ body {
   font-family: 'Press Start 2P', cursive;
   background-image: url('../assets/images/background.jpg');
   background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
 }
 
-#pokemons-container > section > div > img{
-  height: 10em;
+#pokemons-container > div > div > div > img{
+  max-height: 170px;
   margin: 6% 0;
-  width: 80%;
+  max-width: 60%;
 }
 
 .footer {
-  height: 6em;
-  padding: 5%;
+  height: 3em;
+  padding-bottom: 4vh;
+  padding-top: 2vh;
 }
 
 .search-pokemon {
@@ -33,6 +38,12 @@ body {
   background-color: #DA1E2D;
   color: whitesmoke;
   padding: 1% 0;
+  display: grid;
+  
+}
+
+.card-img-top {
+    width: inherit !important;
 }
 
 h2 {
@@ -127,6 +138,16 @@ h3 {
   margin: 15% 0;
 }
 
+.card {
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    height: 220px !important;
+}
+
+.cardtable {
+    height: 190px !important;
+  }
+
 .profile p {
   margin: 5% auto;
   font-size: 0.7em;
@@ -144,3 +165,4 @@ h3 {
   border-radius: 5%;
   padding: 6% 0%;
 }
+

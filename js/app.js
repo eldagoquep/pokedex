@@ -33,14 +33,16 @@ function getPokemonsData(data) {
 function paintPokemonCard(pokemon){
   let card = '';
   card +=
-  `<section class="col-lg-3 col-8 pokemon-card" data-toggle="modal" data-target="#pokemon-detail" data-id="${pokemon.id}">
+  `<div class="col-12 col-sm-6 col-lg-3 pokemon-card" data-toggle="modal" id=${pokemon.name} data-target="#pokemon-detail" data-id="${pokemon.id}">
     <div class="card">
-      <img class="card-img-top img-fluid rounded mx-auto d-block" src="${pokemon.image}" alt="pokemon-${pokemon.name}">
-      <div class="card-body">
-        <h2 class="text-center">${pokemon.name}</h2>
+      <div class="cardtable">
+        <img class="card-img-top img-fluid rounded mx-auto d-block" src="${pokemon.image}" alt="pokemon-${pokemon.name}">
+      </div>
+      <div class="card-body align-bottom">
+        <h2 class="text-center ">${pokemon.name}</h2>
       </div>
     </div>
-  </section>`
+  </div>`
 
   $('#pokemons-container').append(card)
 }
@@ -90,6 +92,18 @@ function createTypesButtons(array){
     $('.type').append(templateButton)
   })
 }
+
+// funciones para ordenar alfabeticamente
+$('.order-button').click(function(){
+   ops = $("#pokemons-container #pokemon-card").atrr("id");
+   $('#pokemons-container').empty();
+   orden = $("#pokemons-container div#pokemon-card").atrr("id");
+  let pokemonsData = JSON.parse(data)
+  let card = '';
+  card += ''
+  
+ });
+
 
 // función qye crea botoenes 'resistant' del modal
 function createResistantButtons(array){
