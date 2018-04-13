@@ -1,10 +1,12 @@
 document.load = getAllData();
 
+
+
 //funcion de scroll
 jQuery(document).ready(function() {
-    $('.search-pokemon').addClass('animated fadeInLeft');
+    $('.filtered-pokemon').addClass('animated fadeInLeft');
     $('.order-button').addClass('animated fadeInRight');
-    $('.pokemon-card').addClass('animated fadeInUp');
+    $('.img-logo').addClass('animated pulse');
     jQuery('.pokemon-card').addClass("hide").viewportChecker({
         classToAdd: 'show animated fadeInUp',
         offset: 100
@@ -35,17 +37,20 @@ function getAllData() {
 
 // función que obtiene la data 'cacheada'
 function getPokemonsData(data) {
+  var num = 0;
   let pokemonsData = JSON.parse(data)
   .forEach(pokemon => {
-    paintPokemonCard(pokemon);
+    
+    paintPokemonCard(pokemon, num);
   })
 }
 
 // función que pinta en html cada pokemon
-function paintPokemonCard(pokemon){
+function paintPokemonCard(pokemon, num){
+  num++;
   let card = '';
   card +=
-  `<div class="col-12 col-sm-6 col-lg-3 pokemon-card" data-toggle="modal" id=${pokemon.name} data-target="#pokemon-detail" data-id="${pokemon.id}">
+  `<div class="col-12 col-sm-6 col-lg-3 pokemon-card" data-toggle="modal" data-nro="${num}" id=${pokemon.name} data-target="#pokemon-detail" data-id="${pokemon.id}">
     <div class="card">
       <div class="cardtable">
         <img class="card-img-top img-fluid rounded mx-auto d-block" src="${pokemon.image}" alt="pokemon-${pokemon.name}">
@@ -54,8 +59,8 @@ function paintPokemonCard(pokemon){
         <h2 class="text-center ">${pokemon.name}</h2>
       </div>
     </div>
-  </div>`
-
+  </div>`;
+  
   $('#pokemons-container').append(card)
 }
 
@@ -109,14 +114,19 @@ function createTypesButtons(array){
 
 // funciones para ordenar alfabeticamente
 $('.order-button').click(function(){
-   ops = $("#pokemons-container #pokemon-card").atrr("id");
-   $('#pokemons-container').empty();
-   orden = $("#pokemons-container div#pokemon-card").atrr("id");
-  let pokemonsData = JSON.parse(data)
-  let card = '';
-  card += ''
-  
+   tinysort('section#pokemons-container>div', {attr: 'id'});
+   $('.order-button').hide();
+   /*$('.order-button').addClass('order-button-nro');
+   $('.order-button-nro').removeClass('order-button');
+   $('.order-button-nro').attr('value','1-9');*/
  });
+
+/*$('.order-button-nro').click(function(){
+   tinysort('section#pokemons-container>div', { data: 'id'});
+   $('.order-button-nro').addClass('order-button');
+   $('.order-button').removeClass('order-button-nro');
+   $('.order-button').attr('value','A-Z');
+ });*/
 
 
 // función qye crea botoenes 'resistant' del modal
@@ -136,3 +146,17 @@ function createWeaknessesButtons(array){
       $('.weaknesses').append(templateButton)
     })
 }
+
+//boton de subir Srcoll to top
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 100) {        // cuando Se baja mas de 50px;
+        $('#return-to-top').fadeIn(200);    // Fade in
+    } else {
+        $('#return-to-top').fadeOut(200);   // Fade out
+    }
+});
+$('#return-to-top').click(function() {      // Cuando se da clic en pokebola, sube
+    $('body,html').animate({
+        scrollTop : 0                      
+    }, 500);
+});
