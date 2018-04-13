@@ -32,6 +32,7 @@ body {
 }
 
 .order-button,
+.order-button-nro,
 .footer {
   background-color: #356ABC;
   color: #FFCD00;
@@ -173,3 +174,36 @@ h3 {
   padding: 6% 0%;
 }
 
+.img-logo {
+  margin-top: 3vh;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top img {
+    position: relative;
+    left: 5px;
+    top: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover img {
+    top: 5px;
+}
