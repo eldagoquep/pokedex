@@ -1,0 +1,220 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('../assets/images/background.jpg');
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+#pokemons-container > div > div > div > img{
+  max-height: 170px;
+  margin: 6% 0;
+  max-width: 60%;
+}
+
+.footer {
+  height: 3em;
+  padding-bottom: 4vh;
+  padding-top: 2vh;
+}
+
+.search-pokemon {
+  padding: 4% 0;
+}
+
+.order-button,
+.order-button-nro,
+.footer {
+  background-color: #356ABC;
+  color: #FFCD00;
+
+}
+.footer { 
+  margin-top: 10px;
+}
+
+.pokemon-card {
+  margin: 1% 0%;
+}
+
+.card-body {
+  background-color: #DA1E2D;
+  color: whitesmoke;
+  padding: 1% 0;
+  display: grid;
+  
+}
+
+.card-img-top {
+    width: inherit !important;
+}
+
+h2 {
+  margin: 1% 0;
+  font-size: 1em
+}
+
+h3 {
+  font-size: 0.8em;
+}
+
+.Grass {
+  background-color: #69C23D;
+}
+
+.Poison {
+  background-color: #A040A0;
+}
+
+.Water {
+  background-color: #4578ED;
+}
+
+.Electric {
+  background-color: #F6C913;
+  color: #fff;
+}
+
+.Fighting {
+  background-color: #AE2A24;
+}
+
+.Fairy {
+  background-color: #E87890;
+}
+
+.Fire {
+  background-color: #ED6D12;
+}
+
+.Ice {
+  background-color: #7ECECE;
+  color: #fff;
+}
+
+.Flying {
+  background-color: #8E6FEB;
+}
+
+.Psychic {
+  background-color: #F73670;
+}
+
+.Bug {
+  background-color: #97A51D;
+}
+
+.Steel {
+  background-color: #A0A0C0;
+}
+
+.Ground {
+  background-color: #DBB54D;
+}
+
+.Rock {
+  background-color: #9C9C63;
+}
+
+.Normal {
+  background-color: #9C9C63;
+}
+
+.Ghost {
+  background-color: #644E88;
+}
+
+.Dragon {
+  background-color: #5E1DF7;
+}
+
+.Dark {
+  background-color: #644E40;
+}
+
+.btn-sm {
+  color: white;
+  font-size: 0.6em;
+  margin: 2% 1%;
+  width: 45%;
+}
+
+.modal-img {
+  margin: 15% 0;
+}
+
+.card {
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    height: 220px !important;
+}
+
+.cardtable {
+    height: 190px !important;
+  }
+
+.profile p {
+  margin: 5% auto;
+  font-size: 0.7em;
+}
+
+.profile, .feature {
+  border: 5px double;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.profile {
+  margin-bottom: 5%;  
+}
+
+.char {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 0.75em;
+  padding: .3rem .65rem;
+}
+
+.img-logo {
+  margin-top: 3vh;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top img {
+    position: relative;
+    left: 5px;
+    top: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover img {
+    top: 5px;
+}
+
